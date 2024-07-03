@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://marmitonne.luzog78.repl.co/ -->
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marmitonne Deluxz +</title>
+
+ <!--<script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'script/jscolor.js') }}" ></script> -->
+
+    
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/home.css') }}">
+
+<script src="{{url_for('static', filename='script/animation.js')}}"></script>
+  
+</head>
+  
+<body>
+
+  <div id="navbar">
+<nav style="text-align: left; padding: 0" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{ url_for('home') }}">Marmitonne Deluxz +</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <form class="form-inline input-group" action="{{ url_for('handle_data') }}">
+    <input name="plat" class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+  </div>
+
+<div id="main">
+ <h1>Bienvenue !</h1>
+  <p>Utilise la barre de recherche pour découvrir plus de 1000 recettes !</p>
+  <div>
+  <img id="animation_pot" src="{{ url_for('static',filename='style/PotLid.png') }}" width=450px>
+  </div>
+    <br>
+  <img id="pot" src="{{ url_for('static',filename='style/cooking-pot.png') }}" width=450px height=450px onclick=anim();>
+</div>
+  
+</body></html>

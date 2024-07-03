@@ -1,0 +1,99 @@
+body {
+  background-color: #e3654f;
+}
+#navbar {
+  text-align: center;
+  display: block;
+  position: sticky; top: 0;
+}
+#main {
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+#presentation_main {
+  background-color: #f7cac9;
+  border: 3px solid #fff0f0;
+  border-radius: 15px;
+  width: 800px;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+}
+h1 {
+  text-align: center;
+}
+table {
+    margin: auto;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 0px;
+    border-color: grey;
+    border: 5px solid;
+    border-radius: 15px;
+}
+tr:first-child:not(:last-child) > *:first-child {
+    border-top-left-radius: 8px;
+}
+tr:first-child:not(:last-child) > *:last-child {
+    border-top-right-radius: 8px;
+}
+tr:last-child:not(:first-child) > *:first-child {
+    border-bottom-left-radius: 8px;
+}
+tr:last-child:not(:first-child) > *:last-child {
+    border-bottom-right-radius: 8px;
+}
+th, td {
+  text-align: center;
+  background-color: darkorange;
+  border: 3px solid;
+  }
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+#presentation {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+#empty_cell {
+  background-color: brown;
+}
+#portions {
+  background-color: lightgreen;
+}
+#ingredients{
+  background-color: #efc050;
+  border: 3px solid #ffd061;
+  border-radius: 15px;
+  width: 800px;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+}
+#preparation{
+  background-color: #dfcfbe;
+  border: 3px solid #ffffff;
+  border-radius: 15px;
+  width: 800px;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+  text-align: left;
+}
+#animation_pot {
+  position: relative;
+  top: 190px;
+}
+
+@keyframes move_up { 100% {transform: translateY(-150px);} }
+@keyframes move_down { 100% { from: transform: translateY(-150px); 
+                              to: transform: translateY(150px); } }
+@keyframes move_down2 { 100% {transform: translateY(150px); } }
+
+#pot:hover ~ #animation_pot {
+  animation: move_up 0.2s ease-out forwards;
+}
